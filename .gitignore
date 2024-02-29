@@ -1,0 +1,6 @@
+*/__pycache__
+*/maskedFace
+*/maskedface1
+*/venv
+/.idea
+/weights/yolov5s-face.pt
