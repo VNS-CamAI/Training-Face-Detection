@@ -20,10 +20,10 @@
 
 | Name        | Link                                                         |
 | ----------- | ------------------------------------------------------------ |
-| yolov5n-0.5 | Link: https://drive.google.com/file/d/1XJ8w55Y9Po7Y5WP4X1Kg1a77ok2tL_KY/view?usp=sharing |
-| yolov5n     | Link: https://drive.google.com/file/d/18oenL6tjFkdR1f5IgpYeQfDFqU4w3jEr/view?usp=sharing |
-| yolov5s     | Link: https://drive.google.com/file/d/1zxaHeLDyID9YU4-hqK7KNepXIwbTkRIO/view?usp=sharing |
-| yolov5m     | Link: https://drive.google.com/file/d/1Sx-KEGXSxvPMS35JhzQKeRBiqC98VDDI |
+| yolov5n-0.5 | Link: https://drive.google.com/file/d/1op6bGKsfmBaX3qmI1HWNHY5U49hPuROy/view?usp=drive_link |
+| yolov5n     | Link: https://drive.google.com/file/d/1Kn5uwTPzC_uM3K0VUuMUM2KB8ebbRcXG/view?usp=drive_link |
+| yolov5s     | Link: https://drive.google.com/file/d/1YGvdlxKo5JNh5tihdxCDKcORlhDDoWbb/view?usp=drive_link |
+| yolov5m     | Link: https://drive.google.com/file/d/1aZz7QQITqpDd_7tUukOngiAGPIAZF2z-/view?usp=drive_link |
 | yolov5l     | Link: https://drive.google.com/file/d/16F-3AjdQBn9p3nMhStUxfDNAE_1bOF_r |
 
 ## Data preparation
