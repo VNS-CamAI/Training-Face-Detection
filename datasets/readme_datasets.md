@@ -11,6 +11,7 @@
 
 ### Mô tả về cấu trúc tập dữ liệu đã thu thập
 - Dữ liệu đã thu thập được đặt trong [link drive này](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=drive_link). Bộ dữ liệu trong folder `maskedFace` gồm 920 ảnh chụp người châu Á chia thành: train (700 ảnh), valid (100 ảnh) và test (120 ảnh).
+- Ảnh đầu vào model có kích thước 640x640
 - Dữ liệu đầu vào được đặt ở folder `datasets` chia thành 3 folder: `train`, `valid` và `test` có cấu trúc như dưới:
 ```
 📦 maskedFace
