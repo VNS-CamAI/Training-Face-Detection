@@ -81,16 +81,16 @@ python3 evaluation.py
 1. Download and place pretrained weights to `weights` folder
 2. Run
 ```shell
-python3 test.py --weights weights/yolov5-face.pt --conf-thres 0.5 --source 0                               # webcam
-                                                                           img.jpg                         # image
-                                                                           vid.mp4                         # video
-                                                                           screen                          # screenshot
-                                                                           path/                           # directory
-                                                                           list.txt                        # list of images
-                                                                           list.streams                    # list of streams
-                                                                           'path/*.jpg'                    # glob
-                                                                           'https://youtu.be/LNwODJXcvt4'  # YouTube
-                                                                           'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
+python3 detect_face.py --weights weights/yolov5-face.pt --source 0 --save-img                               # webcam
+                                                                 img.jpg                         # image
+                                                                 vid.mp4                         # video
+                                                                 screen                          # screenshot
+                                                                 path/                           # directory
+                                                                 list.txt                        # list of images
+                                                                 list.streams                    # list of streams
+                                                                 'path/*.jpg'                    # glob
+                                                                 'https://youtu.be/LNwODJXcvt4'  # YouTube
+                                                                 'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
 ```
 
 
