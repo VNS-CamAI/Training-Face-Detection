@@ -10,7 +10,7 @@
 </p>
 
 ### Mô tả về cấu trúc tập dữ liệu đã thu thập
-- Dữ liệu đã thu thập được đặt trong [link drive này](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=drive_link). Bộ dữ liệu trong folder `maskedFace` gồm 920 ảnh chụp người châu Á chia thành: train (700 ảnh), valid (100 ảnh) và test (120 ảnh).
+- Dữ liệu đã thu thập được đặt trong [link drive này](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=drive_link). Bộ dữ liệu trong folder `maskedFace` gồm 920 ảnh chụp mặt (đa số là người châu Á) chia thành: train (700 ảnh), valid (100 ảnh) và test (120 ảnh).
 - Ảnh đầu vào model có kích thước 640x640
 - Dữ liệu đầu vào được đặt ở folder `datasets` chia thành 3 folder: `train`, `valid` và `test` có cấu trúc như dưới:
 ```
@@ -41,7 +41,7 @@
   - obj_label: label của đối tượng trong danh sách
   - (x_center, y_center) ∈ [0,1]: tọa độ tâm bounding box
   - (width, height) ∈ [0,1]: kích thước của bounding box
-  - (xi, yi) ∈ [0,1]: tọa độ các điểm landmarks hoặc xi=yi=-1 nếu không có thông tin về tọa độ landmarks
+  - (xi, yi) ∈ [0,1]: tọa độ các điểm landmarks nếu có thông tin tọa độ các điểm landmarks hoặc xi=yi=-1 nếu không có thông tin về tọa độ landmarks
 - Tạo file cấu hình `data/dataset.yaml`:
   ```commandline
   # Train/val/test sets as
