@@ -77,7 +77,12 @@ cd widerface_evaluate
 python3 evaluation.py
 ```
 
-## Testing
+## Testing & Evaluation
+```shell
+python3 test.py --weights ./runs/train/exp6/weights/best.pt --data ./data/maskedFace.yaml --task test --save-txt --save-conf --save-hybrid --verbose
+```
+
+## Inference
 1. Download and place pretrained weights to `weights` folder
 2. Run
 ```shell
