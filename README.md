@@ -19,13 +19,23 @@
 ## Pretrained model
 
 | Name        | Link                                                         |
-| ----------- | ------------------------------------------------------------ |
-| yolov5n-0.5 | Link: https://drive.google.com/file/d/1op6bGKsfmBaX3qmI1HWNHY5U49hPuROy/view?usp=drive_link |
-| yolov5n     | Link: https://drive.google.com/file/d/1Kn5uwTPzC_uM3K0VUuMUM2KB8ebbRcXG/view?usp=drive_link |
-| yolov5s     | Link: https://drive.google.com/file/d/1YGvdlxKo5JNh5tihdxCDKcORlhDDoWbb/view?usp=drive_link |
-| yolov5m     | Link: https://drive.google.com/file/d/1aZz7QQITqpDd_7tUukOngiAGPIAZF2z-/view?usp=drive_link |
-| yolov5l     | Link: https://drive.google.com/file/d/16F-3AjdQBn9p3nMhStUxfDNAE_1bOF_r |
-
+|-------------| ------------------------------------------------------------ |
+| yolov5n-0.5 | Link: https://drive.google.com/uc?export=download&id=1op6bGKsfmBaX3qmI1HWNHY5U49hPuROy |
+| yolov5n     | Link: https://drive.google.com/uc?export=download&id=1Kn5uwTPzC_uM3K0VUuMUM2KB8ebbRcXG |
+| yolov5s*    | Link: https://drive.google.com/uc?export=download&id=1YGvdlxKo5JNh5tihdxCDKcORlhDDoWbb |
+| yolov5m     | Link: https://drive.google.com/uc?export=download&id=1aZz7QQITqpDd_7tUukOngiAGPIAZF2z- |
+_(* model in use)_
+## Installation
+1. Clone repo
+```shell
+git clone https://github.com/VNS-CamAI/Training-Face-Detection.git
+```
+2. Build docker environment
+```shell
+cd Training-Face-Detection
+docker build -t fd_env .
+docker run --network host --gpus all -it -v $(pwd):/home -w /home --name fd_env_container fd_env:latest /bin/bash
+```
 ## Data preparation
 ### WIDERFace datasets
 1. Download WIDERFace datasets.
@@ -37,7 +47,7 @@ python3 train2yolo.py /path/to/original/widerface/train [/path/to/save/widerface
 python3 val2yolo.py  /path/to/original/widerface [/path/to/save/widerface/val]
 ```
 ### Custom Masked Face datasets
-1. Download dataset at this [google drive link](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS)
+1. Download dataset at this [google drive link](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=sharing)
 2. Each image has an annotation txt file which saves object labels (YOLO format). The .txt file specifications are:
 - One row per object.
 - Each row is class x_center y_center width height 5-point-lanmarks coordinates format.
@@ -52,12 +62,8 @@ python3 val2yolo.py  /path/to/original/widerface [/path/to/save/widerface/val]
 For other custom datasets, follow [this guide](https://docs.ultralytics.com/yolov5/tutorials/train_custom_data/)
 
 ## Transfer learning
-1. Install package
-```shell
-pip3 install -r requirements.txt
-```
-2. Download masked face datasets and place to `datasets` folder
-3. Create .yaml config file (`./data/maskedFace.yaml`)
+1. Download masked face datasets and place to `datasets` folder
+2. Create .yaml config file (`./data/maskedFace.yaml`)
 3. Download pretrained weights model and place to `weights` folder
 4. Tranfer learning and training:
 ```shell
@@ -77,12 +83,7 @@ cd widerface_evaluate
 python3 evaluation.py
 ```
 
-## Testing & Evaluation
-```shell
-python3 test.py --weights ./runs/train/exp6/weights/best.pt --data ./data/maskedFace.yaml --task test --save-txt --save-conf --save-hybrid --verbose
-```
-
-## Inference
+## Testing
 1. Download and place pretrained weights to `weights` folder
 2. Run
 ```shell
