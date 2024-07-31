@@ -3,8 +3,8 @@
 
 
 #path: ./datasets/maskedFace  # dataset root dir
-train: ./datasets/maskedFace/train  # train images (relative to 'path') 128 images
-val: ./datasets/maskedFace/valid # val images (relative to 'path') 128 images
+train: ./datasets/maskedFace/train  # train images
+val: ./datasets/maskedFace/valid # val images
 test: ./datasets/maskedFace/test/images
 
 # Classes
