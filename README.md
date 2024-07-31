@@ -37,15 +37,6 @@ docker build -t fd_env .
 docker run --network host --gpus all -it -v $(pwd):/home -w /home --name fd_env_container fd_env:latest /bin/bash
 ```
 ## Data preparation
-### WIDERFace datasets
-1. Download WIDERFace datasets.
-2. Download annotation files from [google drive](https://drive.google.com/file/d/1tU_IjyOwGQfGNUvZGwWWM4SwxKp2PUQ8/view?usp=sharing).
-
-```shell
-cd data
-python3 train2yolo.py /path/to/original/widerface/train [/path/to/save/widerface/train]
-python3 val2yolo.py  /path/to/original/widerface [/path/to/save/widerface/val]
-```
 ### Custom Masked Face datasets
 1. Download dataset at this [google drive link](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=sharing)
 2. Each image has an annotation txt file which saves object labels (YOLO format). The .txt file specifications are:
@@ -73,16 +64,6 @@ python3 train.py --img 640 --epochs 50 --patience 10 --data data/maskedFace.yaml
 ```shell
 tensorboard --logdir runs/train
 ```
-
-## WIDERFace Evaluation
-
-```shell
-python3 test_widerface.py --weights 'your test model' --img-size 640
-
-cd widerface_evaluate
-python3 evaluation.py
-```
-
 ## Testing
 1. Download and place pretrained weights to `weights` folder
 2. Run
