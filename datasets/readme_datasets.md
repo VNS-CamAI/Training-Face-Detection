@@ -35,13 +35,13 @@
  ┃ ┗ 📜 ...
 ```
 - Mỗi ảnh trong `train`, `valid` có 1 file annotation `.txt` tương ứng lưu thông tin của các face trong ảnh. Trong file annotation `.txt` lưu thông tin theo các dòng, mỗi dòng chứa thông tin như sau:
-  ```commandline
-  obj_label x_center y_center width height x1 y1 x2 y2 x3 y3 x4 y4 x5 y5
-  ```
-  - obj_label: label của đối tượng trong danh sách
-  - (x_center, y_center) ∈ [0,1]: tọa độ tâm bounding box
-  - (width, height) ∈ [0,1]: kích thước của bounding box
-  - (xi, yi) ∈ [0,1]: tọa độ các điểm landmarks nếu có thông tin tọa độ các điểm landmarks hoặc xi=yi=-1 nếu không có thông tin về tọa độ landmarks
+  _class_id x<sub>center</sub> y<sub>center</sub> width height x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub> x<sub>5</sub> y<sub>5</sub>_
+  Trong đó:
+  - _class_id_: label của đối tượng trong danh sách
+  - _(x<sub>center</sub> y<sub>center</sub>)_ ∈ [0,1]: tọa độ tâm bounding box
+  - _(width height)_ ∈ [0,1]: kích thước của bounding box
+  - _(x<sub>i</sub> y<sub>i</sub>)_ ∈ [0,1]: tọa độ các điểm landmarks nếu có thông tin tọa độ các điểm landmarks hoặc xi=yi=-1 nếu không có thông tin về tọa độ landmarks
+  Nếu các toạ độ, kích thước dưới dạng pixel thì các giá trị _x<sub>center</sub> width x<sub>i</sub>_ được tính bằng giá trị tương ứng dạng pixel chia cho bề rộng của frame/ảnh. Tương tự, các các giá trị _y<sub>center</sub> height y<sub>i</sub>_ được tính bằng giá trị tương ứng dạng pixel chia cho độ cao của frame/ảnh
 - Tạo file cấu hình `data/dataset.yaml`:
   ```commandline
   # Train/val/test sets as

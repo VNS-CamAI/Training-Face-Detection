@@ -41,9 +41,11 @@ docker run --network host --gpus all -it -v $(pwd):/home -w /home --name fd_env_
 1. Download dataset at this [google drive link](https://drive.google.com/drive/folders/1AI6POtUxlreMxOMfq9S8Nky7Y0VIxdhS?usp=sharing)
 2. Each image has an annotation txt file which saves object labels (YOLO format). The .txt file specifications are:
 - One row per object.
-- Each row is class x_center y_center width height 5-point-lanmarks coordinates format.
+- Each row is _class_id x<sub>center</sub> y<sub>center</sub> width height x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub> x<sub>5</sub> y<sub>5</sub>_ 5-point-lanmarks coordinates format.
 - Box coordinates must be in normalized xywh format (from 0 to 1). If your boxes are in pixels, divide x_center and width by image width, and y_center and height by image height.
 - Class numbers are zero-indexed (start from 0).
+
+    More detailed description in [readme_dataset.md](./datasets/readme_datasets.md)
 3. Organize Directories:
 ```shell
 ./datasets/maskedFace/train/im0.jpg  # image
